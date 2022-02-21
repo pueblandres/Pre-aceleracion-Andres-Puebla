@@ -1,7 +1,10 @@
 package com.Alkemy.demo.entidades;
 
+import com.Alkemy.demo.entidades.PeliculaEntidad;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.SQLDelete;
+import org.hibernate.annotations.Where;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -11,6 +14,8 @@ import java.util.List;
 @Table(name = "personaje")
 @Getter
 @Setter
+@SQLDelete(sql = "UPDATE personaje SET deleted = true WHERE id=?")
+@Where(clause = "deleted=false")
 public class PersonajeEntidad {
 
     @Id
@@ -28,6 +33,8 @@ public class PersonajeEntidad {
 
     private String historia;
 
-    @ManyToMany(mappedBy = "personaje", cascade = CascadeType.ALL)
+    private boolean deleted = Boolean.FALSE;
+
+    @ManyToMany(mappedBy = "personajes", cascade = CascadeType.ALL)
     private List<PeliculaEntidad> peliculas = new ArrayList<>();
 }

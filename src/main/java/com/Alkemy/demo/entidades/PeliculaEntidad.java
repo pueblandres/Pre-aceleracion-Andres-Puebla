@@ -2,17 +2,22 @@ package com.Alkemy.demo.entidades;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.SQLDelete;
+import org.hibernate.annotations.Where;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.time.LocalDate;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
+;
 
 @Entity
 @Table(name = "pelicula")
 @Getter
 @Setter
+@SQLDelete(sql = "UPDATE pelicula SET deleted = true WHERE id=?")
+@Where(clause = "deleted=false")
 public class PeliculaEntidad {
 
     @Id
@@ -21,6 +26,8 @@ public class PeliculaEntidad {
     private Long id;
 
     private String imagen;
+
+    private boolean deleted = Boolean.FALSE;
 
     private String titulo;
 
@@ -32,7 +39,7 @@ public class PeliculaEntidad {
 
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "genero_id", insertable = false, updatable = false)
-    private GeneroEntidad  genero;
+    private GeneroEntidad genero;
 
     @Column(name = "genero_id", nullable = false)
     private Long generoId;
@@ -46,7 +53,17 @@ public class PeliculaEntidad {
             name = "pelicula_personaje",
             joinColumns = @JoinColumn(name = "pelicula_id"),
             inverseJoinColumns = @JoinColumn(name = "personaje_id"))
-    private Set<PersonajeEntidad> personaje = new HashSet<>();
+    private List<PersonajeEntidad> personajes = new ArrayList<>();
+
+    public void agregarPersonaje(PersonajeEntidad personaje) {
+        personajes.add(personaje);
+    }
+
+    public void eliminarPersonaje(PersonajeEntidad personaje) {
+        personajes.remove(personaje);
+    }
+
+
 
 
 
