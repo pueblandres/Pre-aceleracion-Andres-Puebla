@@ -31,9 +31,11 @@ public class EmailServicioImpl implements EmailServicio {
         Email fromEmail = new Email(emailSender);
         Email toEmail = new Email(to);
         Content content = new Content(
-                "text/plain",
-                "Bienvenido/a al Challenge de Alkemy Disney API"
+                "text/html",
+                "<h1 style=\"color: blue; font-family: Arial, Helvetica, sans-serif;\">Bienvenido/a al Challenge de Alkemy Disney API</h1> "
+
         );
+
         String subject = "Alkemy Challenge";
 
         Mail mail = new Mail(fromEmail, subject, toEmail, content);
