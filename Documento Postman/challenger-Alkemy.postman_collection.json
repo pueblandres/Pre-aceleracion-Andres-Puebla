@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "254b7a3c-9019-4dc5-bbf6-97230f599fc6",
+		"_postman_id": "ffd3253c-107b-4650-bc8d-d47b87c3df6f",
 		"name": "challenger-Alkemy",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -23,14 +23,14 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/genres",
+							"raw": "http://localhost:8080/generos",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"genres"
+								"generos"
 							]
 						}
 					},
@@ -39,17 +39,27 @@
 				{
 					"name": "/generos",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwdWVibGFuZHJlc0BnbWFpbC5jb20iLCJleHAiOjE2NDYwNTgxNzcsImlhdCI6MTY0NjAyMjE3N30.j2Jg1VhM6VOs6aROvhczxHKiD0JEmHxIH00FHihb5is",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/genres",
+							"raw": "http://localhost:8080/generos",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"genres"
+								"generos"
 							]
 						}
 					},
@@ -61,15 +71,15 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/genres/1",
+							"raw": "http://localhost:8080/generos/22",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"genres",
-								"1"
+								"generos",
+								"22"
 							]
 						}
 					},
@@ -90,15 +100,15 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/genres/1",
+							"raw": "http://localhost:8080/generos/23",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"genres",
-								"1"
+								"generos",
+								"23"
 							]
 						}
 					},
@@ -110,15 +120,15 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/genres/1",
+							"raw": "http://localhost:8080/generos/22",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"genres",
-								"1"
+								"generos",
+								"22"
 							]
 						}
 					},
@@ -135,14 +145,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/movies",
+							"raw": "http://localhost:8080/peliculas",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"movies"
+								"peliculas"
 							]
 						}
 					},
@@ -154,15 +164,15 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/movies/2",
+							"raw": "http://localhost:8080/peliculas/24",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"movies",
-								"2"
+								"peliculas",
+								"24"
 							],
 							"query": [
 								{
@@ -181,20 +191,20 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/movies/filters?title=Dumbo",
+							"raw": "http://localhost:8080/peliculas/filtros?titulo=coco",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"movies",
-								"filters"
+								"peliculas",
+								"filtros"
 							],
 							"query": [
 								{
-									"key": "title",
-									"value": "Dumbo"
+									"key": "titulo",
+									"value": "coco"
 								}
 							]
 						}
@@ -207,20 +217,20 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/movies/filters?genre=1",
+							"raw": "http://localhost:8080/peliculas/filtros?genero=23",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"movies",
-								"filters"
+								"peliculas",
+								"filtros"
 							],
 							"query": [
 								{
-									"key": "genre",
-									"value": "1"
+									"key": "genero",
+									"value": "23"
 								}
 							]
 						}
@@ -233,20 +243,20 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/movies/filters?order=desc",
+							"raw": "http://localhost:8080/peliculas/filtros?orden=asc",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"movies",
-								"filters"
+								"peliculas",
+								"filtros"
 							],
 							"query": [
 								{
-									"key": "order",
-									"value": "desc"
+									"key": "orden",
+									"value": "asc"
 								}
 							]
 						}
@@ -268,14 +278,14 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/movies",
+							"raw": "http://localhost:8080/peliculas",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"movies"
+								"peliculas"
 							]
 						}
 					},
@@ -287,17 +297,17 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/movies/6/character/2",
+							"raw": "http://localhost:8080/peliculas/24/personajes/13",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"movies",
-								"6",
-								"character",
-								"2"
+								"peliculas",
+								"24",
+								"personajes",
+								"13"
 							]
 						}
 					},
@@ -310,7 +320,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"image\": \"Caribean1.jpg\",\n  \"title\": \"Caribean Pirates I\",\n  \"creationDate\": \"2001-03-05\",\n  \"rating\": 5,\n  \"genreId\": 1,\n  \"characters\": [\n    {\n      \"image\": \"Jack234.jpg\",\n      \"name\": \"Jack Sparrow\",\n      \"age\": 34,\n      \"weight\": 70.6,\n      \"history\": \"Principal character\"\n    }\n  ]\n}",
+							"raw": "{\n  \"image\": \"Caribean1.jpg\",\n  \"title\": \"Caribean Pirates I\",\n  \"creationDate\": \"2001-03-05\",\n  \"rating\": 5,\n  \"genreId\": 32,\n  \"characters\": [\n    {\n      \"image\": \"Jack234.jpg\",\n      \"name\": \"Jack Sparrow\",\n      \"age\": 34,\n      \"weight\": 70,\n      \"history\": \"Principal character\"\n    }\n  ]\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -318,15 +328,15 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/movies/2",
+							"raw": "http://localhost:8080/peliculas/24",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"movies",
-								"2"
+								"peliculas",
+								"24"
 							]
 						}
 					},
@@ -347,14 +357,14 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/movies/2",
+							"raw": "http://localhost:8080/peliculas/2",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"movies",
+								"peliculas",
 								"2"
 							]
 						}
@@ -376,16 +386,16 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/movies/6/character/2",
+							"raw": "http://localhost:8080/peliculas/6/personajes/2",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"movies",
+								"peliculas",
 								"6",
-								"character",
+								"personajes",
 								"2"
 							]
 						}
@@ -395,22 +405,32 @@
 			]
 		},
 		{
-			"name": "characters",
+			"name": "personajes",
 			"item": [
 				{
 					"name": "/personajes",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwdWVibGFuZHJlc0BnbWFpbC5jb20iLCJleHAiOjE2NDYwNjAwODksImlhdCI6MTY0NjAyNDA4OX0.Wg_QESJX4AXeBGXFT-riEDdJkMaqrWjAQvlXrpDlbfQ",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/characters",
+							"raw": "http://localhost:8080/personajes",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"characters"
+								"personajes"
 							]
 						}
 					},
@@ -422,14 +442,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/characters/2",
+							"raw": "http://localhost:8080/personajes/2",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"characters",
+								"personajes",
 								"2"
 							]
 						}
@@ -442,20 +462,20 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/characters/filters?name=Dumbo",
+							"raw": "http://localhost:8080/personajes/filtros?nombre=dumbo",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"characters",
-								"filters"
+								"personajes",
+								"filtros"
 							],
 							"query": [
 								{
-									"key": "name",
-									"value": "Dumbo"
+									"key": "nombre",
+									"value": "dumbo"
 								}
 							]
 						}
@@ -468,19 +488,19 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/characters/filters?age=5",
+							"raw": "http://localhost:8080/personajes/filtros?edad=5",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"characters",
-								"filters"
+								"personajes",
+								"filtros"
 							],
 							"query": [
 								{
-									"key": "age",
+									"key": "edad",
 									"value": "5"
 								}
 							]
@@ -494,19 +514,19 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/characters/filters?movie=2",
+							"raw": "http://localhost:8080/personajes/filtro?pelicula=2",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"characters",
-								"filters"
+								"personajes",
+								"filtro"
 							],
 							"query": [
 								{
-									"key": "movie",
+									"key": "pelicula",
 									"value": "2"
 								}
 							]
@@ -517,6 +537,16 @@
 				{
 					"name": "/personajes",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "http://localhost:8080/personajes/filtros?nombre=dumbo",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
@@ -529,14 +559,14 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/characters",
+							"raw": "http://localhost:8080/personajes",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"characters"
+								"personajes"
 							]
 						}
 					},
@@ -548,14 +578,14 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/characters/1",
+							"raw": "http://localhost:8080/personajes/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"characters",
+								"personajes",
 								"1"
 							]
 						}
@@ -577,15 +607,91 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/characters/1",
+							"raw": "http://localhost:8080/personajes/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"characters",
+								"personajes",
 								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"pueblandres@gmail.com\",\n    \"password\": \"password1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var response = pm.response.json();",
+									"",
+									"pm.collectionVariables.set(\"jwt_token\", (\"Bearer \" + response.jwt));"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"pueblandres@gmail.com\",\n    \"password\": \"password1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"login"
 							]
 						}
 					},
@@ -598,13 +704,13 @@
 		"type": "apikey",
 		"apikey": [
 			{
-				"key": "in",
-				"value": "header",
+				"key": "value",
+				"value": "",
 				"type": "string"
 			},
 			{
-				"key": "value",
-				"value": "{{jwt_token}}",
+				"key": "in",
+				"value": "header",
 				"type": "string"
 			},
 			{
