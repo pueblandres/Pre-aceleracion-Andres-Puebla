@@ -19,13 +19,14 @@ En esta API se pueden realizar las siguientes acciones.
 *Búsqueda de personajes aplicando filtro de nombre, edad y película asociada al personaje.
 *Búsqueda de películas aplicando filtro de nombre y genero.
 *Listado de películas ordenado de forma ascendente y descendente.
+*Agregar un personaje a una película ya creada.
+*Autenticación de usuario: Para realizar peticiones recién nombradas el usuario deberá contar con un token que obtendrá al autenticarse. 
+*Al registrarse se enviara un mail de bienvenida.
 
 TESTS:
-Se realizan con Postman. El archibo para tests se encuentra en la carpeta Documento Postman.
+Se realizan con Postman. El archivo para test se encuentra en la carpeta Documento Postman.
 
-DESARROLLO PENDIENTE:
-Autenticación de usuarios.
-Envio de emails.
+
 
 
 
